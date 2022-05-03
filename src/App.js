@@ -1,33 +1,41 @@
-import { useEffect } from "react";
 import "./App.css";
-import KedroViz from "@quantumblack/kedro-viz";
-import { demo } from "./demo";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Component from "./Component";
 
 function App() {
-  useEffect(() => {
-    const layersIcon = document.querySelector(".pipeline-menu-button--layers");
-    const clickEvent = new MouseEvent("click", {
-      bubbles: true,
-      cancelable: false,
-      view: window,
-    });
-
-    layersIcon.dispatchEvent(clickEvent);
-  }, []);
-
   return (
-    <div className="App" style={{ height: `100vh` }}>
-      <KedroViz
-        data={demo}
-        display={{
-          expandAllPipelines: true,
-          globalToolbar: false,
-          miniMap: false,
-          sidebar: false,
-        }}
-      />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route element={<About />} path="/about"></Route>
+          <Route element={<Component />} path="/users"></Route>
+          <Route element={<Home />} path="/"></Route>
+        </Routes>
+      </div>
+    </Router>
   );
+}
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
 }
 
 export default App;
