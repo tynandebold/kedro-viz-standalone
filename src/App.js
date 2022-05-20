@@ -15,7 +15,7 @@ function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users">Users</Link> (Kedro-Viz demo here)
             </li>
           </ul>
         </nav>
