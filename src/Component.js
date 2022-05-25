@@ -3,7 +3,7 @@ import { demoRobust } from "./demo-robust";
 
 function Component() {
   return (
-    <div style={{ height: `90vh`, width: `100%` }}>
+    <div style={{ height: `100vh`, width: `100%` }}>
       <KedroViz
         data={demoRobust}
         display={{
