@@ -1,16 +1,16 @@
 import KedroViz from "@quantumblack/kedro-viz";
-import { demo } from "./demo";
+import { demoRobust } from "./demo-robust";
 
 function Component() {
   return (
     <div style={{ height: `90vh`, width: `100%` }}>
       <KedroViz
-        data={demo}
+        data={demoRobust}
         display={{
           expandAllPipelines: false,
           globalToolbar: false,
           miniMap: false,
-          sidebar: false,
+          sidebar: true,
         }}
         theme="dark"
       />
