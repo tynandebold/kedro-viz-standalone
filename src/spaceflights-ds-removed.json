@@ -1,0 +1,273 @@
+{
+  "edges": [
+    {
+      "source": "aed46479",
+      "target": "5c730596"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "b9240df7"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "0b602e80"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "data_processing"
+    },
+    {
+      "source": "aed46479",
+      "target": "data_processing"
+    },
+    {
+      "source": "daf35ba0",
+      "target": "b9240df7"
+    },
+    {
+      "source": "b9240df7",
+      "target": "23c94afb"
+    },
+    {
+      "source": "5c730596",
+      "target": "10413e23"
+    },
+    {
+      "source": "data_processing",
+      "target": "23c94afb"
+    },
+    {
+      "source": "e5a9ec27",
+      "target": "b9240df7"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "data_processing"
+    },
+    {
+      "source": "de286c87",
+      "target": "daf35ba0"
+    },
+    {
+      "source": "0b602e80",
+      "target": "e5a9ec27"
+    },
+    {
+      "source": "aed46479",
+      "target": "de286c87"
+    },
+    {
+      "source": "data_processing",
+      "target": "10413e23"
+    }
+  ],
+  "layers": ["raw", "intermediate", "primary"],
+  "modular_pipelines": {
+    "__root__": {
+      "children": [
+        {
+          "id": "7b2c6e04",
+          "type": "data"
+        },
+        {
+          "id": "23c94afb",
+          "type": "data"
+        },
+        {
+          "id": "aed46479",
+          "type": "data"
+        },
+        {
+          "id": "data_processing",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "f1d596c2",
+          "type": "data"
+        }
+      ],
+      "id": "__root__",
+      "inputs": [],
+      "name": "Root",
+      "outputs": []
+    },
+    "data_processing": {
+      "children": [
+        {
+          "id": "5c730596",
+          "type": "task"
+        },
+        {
+          "id": "e5a9ec27",
+          "type": "data"
+        },
+        {
+          "id": "de286c87",
+          "type": "task"
+        },
+        {
+          "id": "b9240df7",
+          "type": "task"
+        },
+        {
+          "id": "0b602e80",
+          "type": "task"
+        },
+        {
+          "id": "10413e23",
+          "type": "data"
+        },
+        {
+          "id": "daf35ba0",
+          "type": "data"
+        }
+      ],
+      "id": "data_processing",
+      "inputs": ["7b2c6e04", "aed46479", "f1d596c2"],
+      "name": "Data Processing",
+      "outputs": ["23c94afb", "10413e23"]
+    }
+  },
+  "nodes": [
+    {
+      "full_name": "preprocess_companies_node",
+      "id": "de286c87",
+      "modular_pipelines": ["data_processing"],
+      "name": "Preprocess Companies Node",
+      "parameters": {},
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "task"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+      "full_name": "companies",
+      "id": "aed46479",
+      "layer": "raw",
+      "modular_pipelines": [],
+      "name": "Companies",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+      "full_name": "data_processing.preprocessed_companies",
+      "id": "daf35ba0",
+      "layer": "intermediate",
+      "modular_pipelines": ["data_processing"],
+      "name": "Preprocessed Companies",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "full_name": "preprocess_shuttles_node",
+      "id": "0b602e80",
+      "modular_pipelines": ["data_processing"],
+      "name": "Preprocess Shuttles Node",
+      "parameters": {},
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "task"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.excel_dataset.ExcelDataSet",
+      "full_name": "shuttles",
+      "id": "f1d596c2",
+      "layer": "raw",
+      "modular_pipelines": [],
+      "name": "Shuttles",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+      "full_name": "data_processing.preprocessed_shuttles",
+      "id": "e5a9ec27",
+      "layer": "intermediate",
+      "modular_pipelines": ["data_processing"],
+      "name": "Preprocessed Shuttles",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "full_name": "create_matplotlib_chart",
+      "id": "5c730596",
+      "modular_pipelines": ["data_processing"],
+      "name": "Create Matplotlib Chart",
+      "parameters": {},
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "task"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.matplotlib.matplotlib_writer.MatplotlibWriter",
+      "full_name": "data_processing.matplotlib_image",
+      "id": "10413e23",
+      "layer": null,
+      "modular_pipelines": ["data_processing"],
+      "name": "Matplotlib Image",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "full_name": "create_model_input_table_node",
+      "id": "b9240df7",
+      "modular_pipelines": ["data_processing"],
+      "name": "Create Model Input Table Node",
+      "parameters": {},
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "task"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+      "full_name": "reviews",
+      "id": "7b2c6e04",
+      "layer": "raw",
+      "modular_pipelines": [],
+      "name": "Reviews",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+      "full_name": "model_input_table",
+      "id": "23c94afb",
+      "layer": "primary",
+      "modular_pipelines": [],
+      "name": "Model Input Table",
+      "pipelines": ["dp", "__default__"],
+      "tags": [],
+      "type": "data"
+    },
+    {
+      "dataset_type": null,
+      "full_name": "data_processing",
+      "id": "data_processing",
+      "layer": null,
+      "modular_pipelines": null,
+      "name": "Data Processing",
+      "pipelines": ["__default__"],
+      "tags": [],
+      "type": "modularPipeline"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "Default"
+    },
+    {
+      "id": "dp",
+      "name": "Dp"
+    }
+  ],
+  "selected_pipeline": "__default__",
+  "tags": []
+}

@@ -1,194 +1,78 @@
 export const spaceflights = {
   edges: [
     {
-      source: "3bf31318",
-      target: "cf731c22",
+      source: "aed46479",
+      target: "5c730596",
     },
     {
-      source: "3a20cfc7",
-      target: "data_science",
-    },
-    {
-      source: "23c94afb",
-      target: "298ad1a8",
+      source: "7b2c6e04",
+      target: "b9240df7",
     },
     {
       source: "f1d596c2",
       target: "0b602e80",
     },
     {
-      source: "9098abb2",
-      target: "e95f6986",
-    },
-    {
-      source: "data_processing",
-      target: "23c94afb",
-    },
-    {
-      source: "58feae8a",
-      target: "data_science.active_modelling_pipeline",
-    },
-    {
-      source: "aed46479",
-      target: "5c730596",
-    },
-    {
-      source: "3a20cfc7",
-      target: "25e26176",
-    },
-    {
-      source: "25e26176",
-      target: "257af0ec",
-    },
-    {
-      source: "298ad1a8",
-      target: "0fdb3339",
-    },
-    {
-      source: "cb65a20b",
-      target: "3bf31318",
-    },
-    {
-      source: "23c94afb",
-      target: "data_science",
-    },
-    {
-      source: "298ad1a8",
-      target: "431035f8",
-    },
-    {
-      source: "23c94afb",
-      target: "25e26176",
-    },
-    {
-      source: "f1d596c2",
+      source: "7b2c6e04",
       target: "data_processing",
     },
     {
-      source: "cf731c22",
-      target: "f4b14037",
-    },
-    {
-      source: "de286c87",
-      target: "daf35ba0",
-    },
-    {
-      source: "7380eb47",
-      target: "9098abb2",
-    },
-    {
-      source: "e95f6986",
-      target: "8d702e6f",
-    },
-    {
-      source: "25e26176",
-      target: "cb65a20b",
-    },
-    {
-      source: "e5a9ec27",
-      target: "b9240df7",
+      source: "aed46479",
+      target: "data_processing",
     },
     {
       source: "daf35ba0",
       target: "b9240df7",
     },
     {
-      source: "25e26176",
-      target: "480fad18",
-    },
-    {
-      source: "58feae8a",
-      target: "298ad1a8",
-    },
-    {
-      source: "257af0ec",
-      target: "f4b14037",
-    },
-    {
-      source: "ce201600",
-      target: "8d702e6f",
-    },
-    {
-      source: "25e26176",
-      target: "98872f75",
-    },
-    {
-      source: "431035f8",
-      target: "9098abb2",
-    },
-    {
-      source: "23c94afb",
-      target: "data_science.active_modelling_pipeline",
-    },
-    {
       source: "b9240df7",
       target: "23c94afb",
-    },
-    {
-      source: "58feae8a",
-      target: "data_science",
-    },
-    {
-      source: "98872f75",
-      target: "f4b14037",
-    },
-    {
-      source: "aed46479",
-      target: "de286c87",
-    },
-    {
-      source: "298ad1a8",
-      target: "ce201600",
-    },
-    {
-      source: "data_processing",
-      target: "10413e23",
-    },
-    {
-      source: "3a20cfc7",
-      target: "data_science.candidate_modelling_pipeline",
-    },
-    {
-      source: "0b602e80",
-      target: "e5a9ec27",
-    },
-    {
-      source: "7b2c6e04",
-      target: "b9240df7",
-    },
-    {
-      source: "480fad18",
-      target: "3bf31318",
-    },
-    {
-      source: "aed46479",
-      target: "data_processing",
     },
     {
       source: "5c730596",
       target: "10413e23",
     },
     {
-      source: "23c94afb",
-      target: "data_science.candidate_modelling_pipeline",
+      source: "data_processing",
+      target: "23c94afb",
     },
     {
-      source: "0fdb3339",
-      target: "8d702e6f",
+      source: "e5a9ec27",
+      target: "b9240df7",
     },
     {
-      source: "298ad1a8",
-      target: "7380eb47",
-    },
-    {
-      source: "7b2c6e04",
+      source: "f1d596c2",
       target: "data_processing",
     },
+    {
+      source: "de286c87",
+      target: "daf35ba0",
+    },
+    {
+      source: "0b602e80",
+      target: "e5a9ec27",
+    },
+    {
+      source: "aed46479",
+      target: "de286c87",
+    },
+    {
+      source: "data_processing",
+      target: "10413e23",
+    },
   ],
-  layers: ["raw", "intermediate", "primary", "models"],
+  layers: ["raw", "intermediate", "primary"],
   modular_pipelines: {
     __root__: {
       children: [
+        {
+          id: "7b2c6e04",
+          type: "data",
+        },
+        {
+          id: "23c94afb",
+          type: "data",
+        },
         {
           id: "aed46479",
           type: "data",
@@ -198,19 +82,7 @@ export const spaceflights = {
           type: "modularPipeline",
         },
         {
-          id: "data_science",
-          type: "modularPipeline",
-        },
-        {
-          id: "7b2c6e04",
-          type: "data",
-        },
-        {
           id: "f1d596c2",
-          type: "data",
-        },
-        {
-          id: "23c94afb",
           type: "data",
         },
       ],
@@ -222,11 +94,11 @@ export const spaceflights = {
     data_processing: {
       children: [
         {
-          id: "0b602e80",
+          id: "5c730596",
           type: "task",
         },
         {
-          id: "10413e23",
+          id: "e5a9ec27",
           type: "data",
         },
         {
@@ -238,11 +110,11 @@ export const spaceflights = {
           type: "task",
         },
         {
-          id: "5c730596",
+          id: "0b602e80",
           type: "task",
         },
         {
-          id: "e5a9ec27",
+          id: "10413e23",
           type: "data",
         },
         {
@@ -253,103 +125,7 @@ export const spaceflights = {
       id: "data_processing",
       inputs: ["7b2c6e04", "aed46479", "f1d596c2"],
       name: "Data Processing",
-      outputs: ["10413e23", "23c94afb"],
-    },
-    data_science: {
-      children: [
-        {
-          id: "data_science.candidate_modelling_pipeline",
-          type: "modularPipeline",
-        },
-        {
-          id: "data_science.active_modelling_pipeline",
-          type: "modularPipeline",
-        },
-      ],
-      id: "data_science",
-      inputs: ["3a20cfc7", "58feae8a", "23c94afb"],
-      name: "Data Science",
-      outputs: [],
-    },
-    "data_science.active_modelling_pipeline": {
-      children: [
-        {
-          id: "431035f8",
-          type: "data",
-        },
-        {
-          id: "7380eb47",
-          type: "data",
-        },
-        {
-          id: "298ad1a8",
-          type: "task",
-        },
-        {
-          id: "ce201600",
-          type: "data",
-        },
-        {
-          id: "e95f6986",
-          type: "data",
-        },
-        {
-          id: "0fdb3339",
-          type: "data",
-        },
-        {
-          id: "9098abb2",
-          type: "task",
-        },
-        {
-          id: "8d702e6f",
-          type: "task",
-        },
-      ],
-      id: "data_science.active_modelling_pipeline",
-      inputs: ["58feae8a", "23c94afb"],
-      name: "Active Modelling Pipeline",
-      outputs: [],
-    },
-    "data_science.candidate_modelling_pipeline": {
-      children: [
-        {
-          id: "98872f75",
-          type: "data",
-        },
-        {
-          id: "257af0ec",
-          type: "data",
-        },
-        {
-          id: "25e26176",
-          type: "task",
-        },
-        {
-          id: "f4b14037",
-          type: "task",
-        },
-        {
-          id: "cf731c22",
-          type: "data",
-        },
-        {
-          id: "cb65a20b",
-          type: "data",
-        },
-        {
-          id: "3bf31318",
-          type: "task",
-        },
-        {
-          id: "480fad18",
-          type: "data",
-        },
-      ],
-      id: "data_science.candidate_modelling_pipeline",
-      inputs: ["3a20cfc7", "23c94afb"],
-      name: "Candidate Modelling Pipeline",
-      outputs: [],
+      outputs: ["23c94afb", "10413e23"],
     },
   },
   nodes: [
@@ -382,28 +158,6 @@ export const spaceflights = {
       layer: "intermediate",
       modular_pipelines: ["data_processing"],
       name: "Preprocessed Companies",
-      pipelines: ["dp", "__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      full_name: "create_matplotlib_chart",
-      id: "5c730596",
-      modular_pipelines: ["data_processing"],
-      name: "Create Matplotlib Chart",
-      parameters: {},
-      pipelines: ["dp", "__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      dataset_type:
-        "kedro.extras.datasets.matplotlib.matplotlib_writer.MatplotlibWriter",
-      full_name: "data_processing.matplotlib_image",
-      id: "10413e23",
-      layer: null,
-      modular_pipelines: ["data_processing"],
-      name: "Matplotlib Image",
       pipelines: ["dp", "__default__"],
       tags: [],
       type: "data",
@@ -442,6 +196,28 @@ export const spaceflights = {
       type: "data",
     },
     {
+      full_name: "create_matplotlib_chart",
+      id: "5c730596",
+      modular_pipelines: ["data_processing"],
+      name: "Create Matplotlib Chart",
+      parameters: {},
+      pipelines: ["dp", "__default__"],
+      tags: [],
+      type: "task",
+    },
+    {
+      dataset_type:
+        "kedro.extras.datasets.matplotlib.matplotlib_writer.MatplotlibWriter",
+      full_name: "data_processing.matplotlib_image",
+      id: "10413e23",
+      layer: null,
+      modular_pipelines: ["data_processing"],
+      name: "Matplotlib Image",
+      pipelines: ["dp", "__default__"],
+      tags: [],
+      type: "data",
+    },
+    {
       full_name: "create_model_input_table_node",
       id: "b9240df7",
       modular_pipelines: ["data_processing"],
@@ -475,318 +251,12 @@ export const spaceflights = {
       type: "data",
     },
     {
-      full_name: "split_data_node",
-      id: "25e26176",
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Split Data Node",
-      parameters: {
-        "data_science.candidate_modelling_pipeline.model_options": {
-          features: [
-            "engines",
-            "passenger_capacity",
-            "crew",
-            "review_scores_rating",
-          ],
-          random_state: 8,
-          test_size: 0.2,
-        },
-      },
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      dataset_type: null,
-      full_name:
-        "params:data_science.candidate_modelling_pipeline.model_options",
-      id: "3a20cfc7",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Params: Model Options",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "parameters",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.candidate_modelling_pipeline.X_train",
-      id: "480fad18",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "X Train",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.candidate_modelling_pipeline.X_test",
-      id: "257af0ec",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "X Test",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.candidate_modelling_pipeline.y_train",
-      id: "cb65a20b",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Y Train",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.candidate_modelling_pipeline.y_test",
-      id: "98872f75",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Y Test",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      full_name: "split_data_node",
-      id: "298ad1a8",
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Split Data Node",
-      parameters: {
-        "data_science.active_modelling_pipeline.model_options": {
-          features: [
-            "engines",
-            "passenger_capacity",
-            "crew",
-            "d_check_complete",
-            "moon_clearance_complete",
-            "iata_approved",
-            "company_rating",
-            "review_scores_rating",
-          ],
-          random_state: 3,
-          test_size: 0.2,
-        },
-      },
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      dataset_type: null,
-      full_name: "params:data_science.active_modelling_pipeline.model_options",
-      id: "58feae8a",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Params: Model Options",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "parameters",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.active_modelling_pipeline.X_train",
-      id: "431035f8",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "X Train",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.active_modelling_pipeline.X_test",
-      id: "ce201600",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "X Test",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.active_modelling_pipeline.y_train",
-      id: "7380eb47",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Y Train",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.active_modelling_pipeline.y_test",
-      id: "0fdb3339",
-      layer: null,
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Y Test",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      full_name: "train_model_node",
-      id: "3bf31318",
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Train Model Node",
-      parameters: {},
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      dataset_type: "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
-      full_name: "data_science.candidate_modelling_pipeline.regressor",
-      id: "cf731c22",
-      layer: "models",
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Regressor",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      full_name: "train_model_node",
-      id: "9098abb2",
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Train Model Node",
-      parameters: {},
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      dataset_type: "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
-      full_name: "data_science.active_modelling_pipeline.regressor",
-      id: "e95f6986",
-      layer: "models",
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Regressor",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "data",
-    },
-    {
-      full_name: "evaluate_model_node",
-      id: "f4b14037",
-      modular_pipelines: [
-        "data_science",
-        "data_science.candidate_modelling_pipeline",
-      ],
-      name: "Evaluate Model Node",
-      parameters: {},
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
-      full_name: "evaluate_model_node",
-      id: "8d702e6f",
-      modular_pipelines: [
-        "data_science",
-        "data_science.active_modelling_pipeline",
-      ],
-      name: "Evaluate Model Node",
-      parameters: {},
-      pipelines: ["__default__"],
-      tags: [],
-      type: "task",
-    },
-    {
       dataset_type: null,
       full_name: "data_processing",
       id: "data_processing",
       layer: null,
       modular_pipelines: null,
       name: "Data Processing",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "modularPipeline",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.candidate_modelling_pipeline",
-      id: "data_science.candidate_modelling_pipeline",
-      layer: null,
-      modular_pipelines: null,
-      name: "Candidate Modelling Pipeline",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "modularPipeline",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science",
-      id: "data_science",
-      layer: null,
-      modular_pipelines: null,
-      name: "Data Science",
-      pipelines: ["__default__"],
-      tags: [],
-      type: "modularPipeline",
-    },
-    {
-      dataset_type: null,
-      full_name: "data_science.active_modelling_pipeline",
-      id: "data_science.active_modelling_pipeline",
-      layer: null,
-      modular_pipelines: null,
-      name: "Active Modelling Pipeline",
       pipelines: ["__default__"],
       tags: [],
       type: "modularPipeline",
