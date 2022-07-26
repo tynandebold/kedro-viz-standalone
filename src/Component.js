@@ -1,5 +1,6 @@
 import KedroViz from "@quantumblack/kedro-viz";
 import { demoRobust } from "./demo-robust";
+// import { spaceflights } from "./spaceflights";
 
 function Component() {
   return (
